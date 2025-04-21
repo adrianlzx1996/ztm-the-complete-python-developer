@@ -7,3 +7,6 @@ def index(request):
 
 def about(request):
     return HttpResponse("About Me")
+
+def hello(request, first_name):
+    return HttpResponse(f"Hello {first_name}")
