@@ -3,7 +3,8 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, 'movies/index.html', {'movie': 'gladiator'})
+    context = {'movies': ['gladiator', 'top gun', 'casino royale']}
+    return render(request, 'movies/index.html', context)
 
 
 def about(request):
